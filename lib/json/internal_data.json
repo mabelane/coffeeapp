@@ -1,0 +1,31 @@
+{
+    "Coffee":[
+       {
+        "imgPath": "lib/img/latte/capp Oatmilk.webp",
+        "title": "Cappuccino",
+        "extras": "With OatMilk",
+        "desc":"A cappuccino is a coffee-based drink made primarily from espresso and milk",
+        "price": 54.30,
+        "rating": 3.8
+       },
+       {
+        "imgPath": "lib/img/latte/Latte yellow.jpeg",
+        "title": "Cappuccino",
+        "extras": "With White Chocolate",
+        "desc":"A cappuccino is a coffee-based drink made primarily from espresso and milk",
+        "price": 54.30,
+        "rating": 4.8
+       },
+       {
+        "imgPath": "lib/img/latte/capp Oatmilk.webp",
+        "title": "Cappuccino",
+        "extras": "With OatMilk",
+        "desc":"A cappuccino is a coffee-based drink made primarily from espresso and milk",
+        "price": 25.30,
+        "rating": 3.5
+       }
+    ],
+    "Favourite":[
+     ]
+
+}
