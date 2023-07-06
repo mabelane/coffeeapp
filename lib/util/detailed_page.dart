@@ -107,7 +107,7 @@ class DetailedPage extends StatelessWidget {
                           ),
                         )),
                         BlurEffect(
-                          height: size.height * 0.18,
+                          height: size.height * 0.165,
                           borderRadius: BorderRadius.circular(35),
                           padding: const EdgeInsets.all(12),
                           child: Row(
@@ -120,13 +120,15 @@ class DetailedPage extends StatelessWidget {
                                   children: [
                                     Text(
                                       coffee.title,
+                                      maxLines: 2,
                                       style: const TextStyle(
                                           color: Colors.white,
-                                          fontSize: 28,
+                                          fontSize: 24,
                                           fontWeight: FontWeight.bold),
                                     ),
                                     Text(
                                       coffee.extras,
+                                      maxLines: 1,
                                       style: const TextStyle(
                                           color: Color.fromARGB(
                                               255, 188, 188, 188),

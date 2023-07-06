@@ -36,7 +36,7 @@ class CoffeeContainer extends StatelessWidget {
         children: [
           Stack(alignment: Alignment.topRight, children: [
             SizedBox(
-              width: 180,
+              width: 195,
               height: 150,
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(15),
@@ -79,8 +79,9 @@ class CoffeeContainer extends StatelessWidget {
           ),
           Text(
             coffee.title,
+            maxLines: 1,
             style: const TextStyle(
-                color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),
+                color: Colors.white, fontSize: 15, fontWeight: FontWeight.bold),
           ),
           Text(
             coffee.extras,

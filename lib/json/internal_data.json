@@ -23,7 +23,23 @@
         "desc":"A cappuccino is a coffee-based drink made primarily from espresso and milk",
         "price": 25.30,
         "rating": 3.5
-       }
+       },
+       {
+         "imgPath": "lib/img/latte/Iced-Cappuccino.webp",
+         "title": "Iced Cappuccino",
+         "extras": "With cold foam and ice",
+         "desc":"An iced cappuccino is a coffee drink with espresso, milk, ice, and optional sweetener.",
+         "price": 35.30,
+         "rating": 3.5
+        },
+        {
+         "imgPath": "lib/img/latte/Mocha-Cappuccino.webp",
+         "title": "Mocha Cappuccino",
+         "extras": "With Chocolate syrup",
+         "desc":"A mocha cappuccino is another name for a mocha or mocha latte: a drink made with espresso, steamed milk and chocolate.",
+         "price": 35.30,
+         "rating": 3.5
+        }
     ],
     "Favourite":[
      ]
