@@ -1,7 +1,7 @@
 import 'dart:ui';
+import 'package:coffeeapp/view/mobile/navbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'view/mobile/home.dart';
 
 void main() {
   runApp(const ProviderScope(child: MyApp()));
@@ -16,16 +16,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        pageTransitionsTheme: const PageTransitionsTheme(
-          builders: <TargetPlatform, PageTransitionsBuilder>{
-            TargetPlatform.android: OpenUpwardsPageTransitionsBuilder(),
-            TargetPlatform.iOS: CupertinoPageTransitionsBuilder(),
-          },
-        ),
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: MyHomePage(),
+      home: const NavBar(),
     );
   }
 }
@@ -114,8 +108,8 @@ class _MyHomePageState extends State<MyHomePage> {
                           style: TextStyle(color: Colors.white),
                         ),
                         onTap: () {
-                          Navigator.of(context).push(
-                              MaterialPageRoute(builder: (context) => Home()));
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => const NavBar()));
                         },
                       ),
                     ),

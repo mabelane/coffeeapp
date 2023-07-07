@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:coffeeapp/view/blur_effect.dart';
 import 'package:flutter/material.dart';
+import 'package:readmore/readmore.dart';
 
 import '../model/Coffee.dart';
 import 'constants/colors_dark.dart';
@@ -10,21 +11,10 @@ class DetailedPage extends StatelessWidget {
   const DetailedPage({
     super.key,
     required this.coffee,
-    // required this.imgPath,
-    // required this.title,
-    // required this.extras,
-    // required this.desc,
-    // required this.price,
-    // required this.rating,
   });
   final Coffee coffee;
   final int cupIndex = 0;
-  // final String imgPath;
-  // final String title;
-  // final String extras;
-  // final String desc;
-  // final double price;
-  // final double rating;
+
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
@@ -38,7 +28,6 @@ class DetailedPage extends StatelessWidget {
             SizedBox(
               height: size.height * 0.6,
               child: Stack(
-                //alignment: Alignment.bottomCenter,
                 children: [
                   ClipRRect(
                     borderRadius: const BorderRadius.only(
@@ -114,7 +103,6 @@ class DetailedPage extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               SizedBox(
-                                //height: size.height * 0.16,
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
@@ -278,10 +266,12 @@ class DetailedPage extends StatelessWidget {
                     const SizedBox(
                       height: 20,
                     ),
-                    Text(
+                    ReadMoreText(
                       coffee.desc,
-                      maxLines: 2,
-                      style: const TextStyle(color: bgTxtWhite, fontSize: 17.5),
+                      trimLines: 2,
+                      trimLength: 90,
+                      colorClickableText: btBrown,
+                      style: const TextStyle(color: bgTxtWhite),
                     ),
                     const SizedBox(
                       height: 25,
