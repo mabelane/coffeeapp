@@ -26,7 +26,7 @@ class BlurEffect extends StatelessWidget {
         child: Stack(
           children: [
             BackdropFilter(
-              filter: ImageFilter.blur(sigmaX: 15, sigmaY: 15),
+              filter: ImageFilter.blur(sigmaX: 3.5, sigmaY: 3.5),
               child: Container(
                 padding: padding,
                 decoration: BoxDecoration(
@@ -35,8 +35,8 @@ class BlurEffect extends StatelessWidget {
                         begin: Alignment.topRight,
                         end: Alignment.bottomRight,
                         colors: [
-                          Colors.black.withOpacity(0.45),
-                          Colors.black.withOpacity(0.45),
+                          Colors.black.withOpacity(0.55),
+                          Colors.black.withOpacity(0.55),
                         ])),
                 child: child,
               ),

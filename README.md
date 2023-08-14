@@ -15,5 +15,5 @@ For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
-UI design is not mine orginally came from (https://dribbble.com/shots/15475209-Coffee-Shop-Mobile-Apps-Dark-Mode)
+UI design is  from (https://dribbble.com/shots/15475209-Coffee-Shop-Mobile-Apps-Dark-Mode)
 

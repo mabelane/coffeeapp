@@ -61,7 +61,7 @@ class Home extends ConsumerWidget {
             ),
             Container(
               height: 45,
-              margin: const EdgeInsets.only(left: 10),
+              margin: const EdgeInsets.symmetric(horizontal: 10),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
                 color: navyblue,
@@ -132,7 +132,7 @@ class Home extends ConsumerWidget {
                           });
                     },
                     error: (error, s) => Text(error.toString()),
-                    loading: () => SizedBox())),
+                    loading: () => const SizedBox())),
             const SizedBox(
               height: 15,
             ),
@@ -161,7 +161,7 @@ class Home extends ConsumerWidget {
                       child: GestureDetector(
                         onTap: () {},
                         child: const Image(
-                          image: AssetImage("lib/img/latte/capp Oatmilk.webp"),
+                          image: AssetImage("lib/img/capp_oatmilk.webp"),
                           fit: BoxFit.fill,
                           height: double.infinity,
                           width: double.infinity,

@@ -33,11 +33,11 @@ class DetailedPage extends StatelessWidget {
                     borderRadius: const BorderRadius.only(
                         bottomLeft: Radius.circular(35),
                         bottomRight: Radius.circular(35)),
-                    child: Image(
-                      image: AssetImage(coffee.imgPath),
+                    child: Image.network(
+                      coffee.image,
                       fit: BoxFit.fill,
-                      height: double.infinity,
                       width: double.infinity,
+                      height: double.infinity,
                     ),
                   ),
                   Column(
@@ -314,7 +314,7 @@ class DetailedPage extends StatelessWidget {
                               style: TextStyle(color: bgTxtGrey),
                             ),
                             Text(
-                              coffee.price.toStringAsFixed(2),
+                              "R ${coffee.price.toStringAsFixed(2)}",
                               style: const TextStyle(
                                   fontSize: 18,
                                   fontWeight: FontWeight.bold,

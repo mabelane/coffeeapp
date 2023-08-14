@@ -1,5 +1,5 @@
 import 'dart:convert';
-
+import 'package:http/http.dart' as http;
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -7,12 +7,17 @@ import '../../model/Coffee.dart';
 
 class ApiServices {
   Future<List<Coffee>> getCoffee() async {
-    final String response =
-        await rootBundle.loadString("lib/json/internal_data.json");
-    final coffeeData = await json.decode(response);
-    var coffeeItems = coffeeData["Coffee"] as List<dynamic>;
+    final response = await http.get(Uri.parse(
+        "https://raw.githubusercontent.com/mabelane/maui_coffee/main/maui_coffee/Resources/Raw/coffeedata.json"));
 
-    return coffeeItems.map((e) => Coffee.fromJson(e)).toList();
+    if (response.statusCode == 200) {
+      final coffeeData = json.decode(response.body);
+      var coffeeItems = coffeeData as List<dynamic>;
+
+      return coffeeItems.map((e) => Coffee.fromJson(e)).toList();
+    } else {
+      throw Exception('Failed to load Coffee');
+    }
   }
 }
 

@@ -2,7 +2,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 @JsonSerializable()
 class Coffee {
-  String imgPath = "";
+  String image = "";
   String title = "";
   String extras = "";
   String desc = "";
@@ -10,7 +10,7 @@ class Coffee {
   double rating = 0;
 
   Coffee({
-    required this.imgPath,
+    required this.image,
     required this.title,
     required this.extras,
     required this.desc,
@@ -19,7 +19,7 @@ class Coffee {
   });
 
   Coffee.fromJson(Map<String, dynamic> json) {
-    imgPath = json["imgPath"];
+    image = json["image"];
     title = json["title"];
     extras = json["extras"];
     desc = json["desc"];
@@ -29,7 +29,7 @@ class Coffee {
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
-    data["imgPath"] = imgPath;
+    data["image"] = image;
     data["title"] = title;
     data["extras"] = extras;
     data["desc"] = desc;

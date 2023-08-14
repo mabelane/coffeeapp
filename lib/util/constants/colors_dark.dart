@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 const navyblue = Color.fromARGB(255, 14, 17, 22);
-const bgBlack = Color.fromARGB(255, 3, 3, 5);
+const bgBlack = Color.fromARGB(255, 2, 2, 4);
 const containerBlack = Color.fromARGB(255, 16, 16, 24);
 const btBrown = Color(0xFFD17842);
 const bgGrey = Color(0xFF605A57);

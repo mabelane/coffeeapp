@@ -10,18 +10,8 @@ class CoffeeContainer extends StatelessWidget {
   const CoffeeContainer(
       {super.key,
       required this.coffee,
-      // required this.coffeeType,
-      // required this.withText,
-      // required this.price,
-      // required this.rating,
-      // required this.imgPath,
       required this.onTap});
   final Coffee coffee;
-  // final String coffeeType;
-  // final String withText;
-  // final String imgPath;
-  // final double price;
-  // final double rating;
   final VoidCallback onTap;
   @override
   Widget build(BuildContext context) {
@@ -42,11 +32,11 @@ class CoffeeContainer extends StatelessWidget {
                 borderRadius: BorderRadius.circular(15),
                 child: GestureDetector(
                   onTap: onTap,
-                  child: Image(
-                    image: AssetImage(coffee.imgPath),
+                  child: Image.network(
+                    coffee.image,
                     fit: BoxFit.fill,
-                    height: double.infinity,
                     width: double.infinity,
+                    height: double.infinity,
                   ),
                 ),
               ),
@@ -92,7 +82,7 @@ class CoffeeContainer extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                coffee.price.toStringAsFixed(2),
+                "R ${coffee.price.toStringAsFixed(2)}",
                 style: const TextStyle(
                     color: Colors.white, fontWeight: FontWeight.bold),
               ),
